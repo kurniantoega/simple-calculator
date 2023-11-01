@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #393e46;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 400px;
+  background-color: #222831;
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 1rem;
+  box-shadow: 3px 3px 4px rgba(255, 255, 255, 0.7), -3px -3px 4px rgba(255, 255, 255, 0.7);
+}
+
+.container .display {
+  pointer-events: none;
+  background-color: #eee;
+  padding: 0.5rem 0.8rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+  word-wrap: break-word;
+  word-break: break-all;
+  margin-bottom: 1rem;
+}
+.container .display .previous-display {
+  font-size: 1.5rem;
+  color: #393e46;
+  height: 30px;
+  font-family: "Roboto Mono", monospace;
+}
+.container .display .current-display {
+  font-size: 2.5rem;
+  color: #222831;
+  height: 45px;
+  font-family: "Roboto Mono", monospace;
+}
+
+.container .input {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.container .input button {
+  cursor: pointer;
+  font-size: 1.4rem;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: #fff;
+  height: 90px;
+}
+.container .input .number:hover {
+  transition: 0.3s;
+  font-size: 2rem;
+}
+.container .input .operator:hover {
+  transition: 0.3s;
+  font-size: 2.5rem;
+}
+.container .input .all-clear:hover,
+.container .input .equals:hover,
+.container .input .backspace:hover {
+  opacity: 0.5;
+  transition: 0.3s;
+}
+.container .input .operator,
+.container .input .backspace {
+  color: #00adb5;
+}
+.container .input .all-clear,
+.container .input .equals {
+  background-color: #00adb5;
+  color: #fff;
+  border-radius: 5px;
+}
+.container .input .all-clear {
+  grid-column: span 2;
+}
